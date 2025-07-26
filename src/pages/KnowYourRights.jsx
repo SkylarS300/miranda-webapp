@@ -1,4 +1,4 @@
-import rightsData from '../bot/miranda_responses.json';
+import rightsData from '../bot/miranda_static.json';
 import '../styles/knowYourRights.css';
 import { useState } from 'react';
 import { generatePDF } from '../utils/generatePDF';
