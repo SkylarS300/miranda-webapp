@@ -36,3 +36,25 @@ _Miranda_ is a simple, trustworthy rights-based chatbot that helps people unders
 ```bash
 git clone https://github.com/SkylarS300/miranda-webapp.git
 cd miranda-webapp
+```
+
+### 2. Install dependencies
+```bash
+npm install
+```
+
+### 3. Run the app locally
+```bash
+npm run dev
+```
+Open http://localhost:5173 in your browser.
+
+## 🗂 Folder Structure
+```bash
+public/
+  images/          # Logo and hero image
+src/
+  components/      # Reusable components like SituationFlow
+  pages/           # React Router pages (Home, Ask, Rights, etc.)
+  styles/          # CSS modules and global styles
+```
