@@ -1,4 +1,9 @@
+// src/utils/generatePDF.js
+
 export async function generatePDF(section) {
+    // ✅ Prevent build-time/server-side execution
+    if (typeof window === 'undefined') return;
+
     const { jsPDF } = await import("jspdf");
     const doc = new jsPDF();
     let y = 20;
@@ -22,7 +27,7 @@ export async function generatePDF(section) {
     y += 10;
 
     doc.setFontSize(12);
-    writeText(section.response, false);
+    if (section.response) writeText(section.response, false);
 
     if (section.details) {
         writeText('Details:', true);
