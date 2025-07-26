@@ -1,17 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import '../styles/globals.css';
 
 const Navbar = () => {
     const location = useLocation();
+    const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+    // Close menu when route changes
+    useEffect(() => {
+        setMobileMenuOpen(false);
+    }, [location.pathname]);
 
     return (
         <nav className="navbar">
             <div className="navbar-inner">
-                <div className="logo-circle">
-                    <img src="/images/miranda-logo.png" alt="Miranda Logo" />
-                </div>
-                <ul className="navbar-links">
+                <button
+                    className="logo-button"
+                    onClick={() => setMobileMenuOpen(prev => !prev)}
+                    aria-label="Toggle menu"
+                >
+                    <div className="logo-circle">
+                        <img src="/images/miranda-logo.png" alt="Miranda Logo" />
+                    </div>
+                </button>
+
+                <ul className={`navbar-links ${isMobileMenuOpen ? 'open' : ''}`}>
                     <li className={location.pathname === '/' ? 'active' : ''}>
                         <Link to="/">Home</Link>
                     </li>
