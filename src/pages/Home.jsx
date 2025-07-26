@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import '../styles/home.css';
 
 export default function Home() {
@@ -20,8 +21,8 @@ export default function Home() {
                 </p>
 
                 <div className="button-group">
-                    <a href="/ask" className="start-chat-button">Start Chat</a>
-                    <a href="/rights" className="learn-more-button">Learn More</a>
+                    <Link to="/ask" className="start-chat-button">Start Chat</Link>
+                    <Link to="/rights" className="learn-more-button">Learn More</Link>
                 </div>
             </header>
         </div>
