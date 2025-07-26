@@ -1,6 +1,5 @@
-import jsPDF from 'jspdf';
-
-export function generatePDF(section) {
+export async function generatePDF(section) {
+    const { jsPDF } = await import("jspdf");
     const doc = new jsPDF();
     let y = 20;
 
