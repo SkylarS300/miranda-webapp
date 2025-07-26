@@ -1,0 +1,225 @@
+{
+    "police": {
+        "emoji": "👮‍♀️",
+        "color": "#fff7ed",
+        "title": "Police Stops and Searches",
+        "pdfTitle": "Police Stops and Searches",
+        "response": "If they don’t have a warrant or your permission, they generally can’t search your phone or belongings. But there are exceptions.",
+        "details": [
+            "During a stop, you can ask: 'Am I being detained, or am I free to go?' If you’re not being detained, you can leave. Stay calm and respectful.",
+            "Officers can perform a frisk if they suspect you’re armed, but a full search usually requires probable cause or consent.",
+            "Never physically resist, even if you believe your rights are being violated. Assert them verbally and remember everything for later documentation."
+        ],
+        "dos": [
+            "Stay calm",
+            "Politely assert your rights",
+            "Ask if you're free to leave"
+        ],
+        "donts": [
+            "Don't resist",
+            "Don't consent to searches"
+        ],
+        "tips": [
+            "Record the interaction if safe to do so.",
+            "Write down badge numbers and names afterward.",
+            "Ask if you're under arrest before answering questions."
+        ],
+        "related": [
+            {
+                "question": "Can police search my car during a traffic stop?",
+                "answer": "Only if they have probable cause, your consent, or see something in plain view."
+            },
+            {
+                "question": "What if they say they smell weed?",
+                "answer": "That may qualify as probable cause in many states. Stay silent and calm."
+            }
+        ],
+        "source": "https://www.aclu.org/know-your-rights"
+    },
+    "immigration": {
+        "emoji": "🛂",
+        "color": "#ecfdf5",
+        "title": "Immigration and ICE",
+        "pdfTitle": "Immigration Rights – Dealing with ICE",
+        "response": "You do not have to open your door unless ICE has a warrant signed by a judge. You have the right to remain silent.",
+        "details": [
+            "ICE agents often rely on fear. Stay calm. You can ask for the warrant to be slipped under the door. If it’s not signed by a judge, you don’t have to comply.",
+            "You can say: 'I do not wish to speak without a lawyer.' You do not have to tell them your immigration status.",
+            "Even if you're undocumented, you have constitutional rights. Do not sign any documents without understanding them."
+        ],
+        "dos": [
+            "Ask for ID",
+            "Request a lawyer",
+            "Stay silent"
+        ],
+        "donts": [
+            "Don’t sign anything without a lawyer",
+            "Don’t lie",
+            "Don’t run"
+        ],
+        "tips": [
+            "Create a safety plan with your family if ICE comes.",
+            "Memorize a legal aid number.",
+            "Avoid carrying false documents."
+        ],
+        "related": [
+            {
+                "question": "What if they come to my job?",
+                "answer": "Same rules apply. You can ask if you're free to leave and stay silent."
+            },
+            {
+                "question": "What if I already have a deportation order?",
+                "answer": "Call a lawyer immediately. You may still have options under new rulings."
+            }
+        ],
+        "source": "https://www.nilc.org/issues/immigration-enforcement/know-your-rights/"
+    },
+    "housing": {
+        "emoji": "🏠",
+        "color": "#fef9c3",
+        "title": "Tenant & Housing Rights",
+        "pdfTitle": "Housing Rights – Tenants",
+        "response": "Landlords cannot enter your home without proper notice or legal cause. You have protections against unfair evictions.",
+        "details": [
+            "In most places, landlords must give written notice (typically 24–48 hours) before entering your unit unless there's an emergency.",
+            "Evictions require a formal court process. You can't be kicked out just because a landlord wants you gone quickly.",
+            "You are entitled to a safe and livable home. If essential repairs are ignored, legal remedies may apply—but consult a tenant organization first."
+        ],
+        "dos": [
+            "Request everything in writing",
+            "Document repairs or damages",
+            "Know your local tenant laws"
+        ],
+        "donts": [
+            "Don’t ignore eviction notices",
+            "Don’t withhold rent without legal advice"
+        ],
+        "tips": [
+            "Take timestamped photos of any issues.",
+            "Save every text, email, or voicemail.",
+            "Check if your city has rent stabilization or tenant unions."
+        ],
+        "related": [
+            {
+                "question": "Can they evict me for reporting them?",
+                "answer": "That may be illegal retaliation. Report it to a tenant rights group or housing board."
+            },
+            {
+                "question": "What if I have no written lease?",
+                "answer": "You may still have rights under 'implied tenancy' laws depending on your state."
+            }
+        ],
+        "source": "https://www.nolo.com/legal-encyclopedia/tenant-rights"
+    },
+    "protest": {
+        "emoji": "📢",
+        "color": "#f3e8ff",
+        "title": "Protesting & Free Speech",
+        "pdfTitle": "Protest & First Amendment Rights",
+        "response": "You have the right to protest peacefully in public spaces. Police can’t arrest you for filming or expressing your views.",
+        "details": [
+            "You can protest on sidewalks, parks, or other public forums without a permit—as long as you're not blocking traffic.",
+            "Recording police is legal in all 50 states, but don’t interfere physically.",
+            "Private businesses can ask you to leave. If you don’t, they can call police for trespassing."
+        ],
+        "dos": [
+            "Stay on sidewalks or public spaces",
+            "Record police interactions",
+            "Comply with lawful orders"
+        ],
+        "donts": [
+            "Don’t block traffic without a permit",
+            "Don’t resist arrest"
+        ],
+        "tips": [
+            "Carry a paper copy of emergency contacts and a legal aid number.",
+            "Use chalk or signs—spray paint or property damage is not protected speech.",
+            "Designate a trusted contact in case you’re detained."
+        ],
+        "related": [
+            {
+                "question": "Can schools discipline me for protesting?",
+                "answer": "Public schools can't punish you just for speech—unless it's disruptive to learning."
+            },
+            {
+                "question": "Can I wear protest shirts at work?",
+                "answer": "That depends on your employer and whether it interferes with operations."
+            }
+        ],
+        "source": "https://www.aclu.org/know-your-rights/protesters-rights/"
+    },
+    "work": {
+        "emoji": "💼",
+        "color": "#e0f2fe",
+        "title": "Workplace & Labor Rights",
+        "pdfTitle": "Workplace Rights – Labor & Protection",
+        "response": "You have the right to fair pay, safe conditions, and to speak up without retaliation—depending on your employment status.",
+        "details": [
+            "Federal and state laws protect your right to a safe workplace, minimum wage, and overtime pay—even if you're undocumented.",
+            "You may have the right to organize with coworkers about pay or conditions. This is protected by the National Labor Relations Act.",
+            "Discrimination based on race, gender, disability, or religion is illegal—document everything and report to HR or the EEOC."
+        ],
+        "dos": [
+            "Know your wage and hour rights",
+            "Report unsafe conditions",
+            "Document harassment or discrimination"
+        ],
+        "donts": [
+            "Don’t quit without checking your rights",
+            "Don’t assume you have no recourse"
+        ],
+        "tips": [
+            "Save copies of paystubs, schedules, and written warnings.",
+            "You may be entitled to unpaid wages even after quitting.",
+            "Gig workers and independent contractors have different rights—check your classification."
+        ],
+        "related": [
+            {
+                "question": "Can I be fired for calling out unsafe work?",
+                "answer": "That may be illegal retaliation. Contact OSHA or a workers’ rights group."
+            },
+            {
+                "question": "What if I'm undocumented?",
+                "answer": "You’re still protected by many labor laws. Don’t let employers use your status to silence you."
+            }
+        ],
+        "source": "https://www.dol.gov/general/topic/discrimination"
+    },
+    "school": {
+        "emoji": "🎓",
+        "color": "#e0fce0",
+        "title": "Student & School Rights",
+        "pdfTitle": "Student Rights – Free Speech & Fairness",
+        "response": "Public school students still have free speech rights, but schools can set limits to maintain order.",
+        "details": [
+            "You can speak your mind as long as it doesn’t cause a disruption to learning or threaten others.",
+            "Schools can’t search your belongings without 'reasonable suspicion,' but they don’t need a warrant like police do.",
+            "Discipline must be consistent and non-discriminatory. If you believe you're being targeted, document everything and talk to an advocate."
+        ],
+        "dos": [
+            "Speak up respectfully",
+            "Know your dress code rights",
+            "Challenge unfair discipline"
+        ],
+        "donts": [
+            "Don’t assume you have no rights as a minor",
+            "Don’t forget that school rules vary"
+        ],
+        "tips": [
+            "Keep a record of incidents, emails, or punishments.",
+            "Ask for policies in writing.",
+            "You can usually bring a parent or advocate to school meetings."
+        ],
+        "related": [
+            {
+                "question": "Can they suspend me for protesting?",
+                "answer": "Not if you're peaceful and not disrupting class. But they may discipline for cutting class."
+            },
+            {
+                "question": "Do LGBTQ+ students have protections?",
+                "answer": "Yes. Harassment based on gender identity or sexual orientation is prohibited in many states."
+            }
+        ],
+        "source": "https://www.aclu.org/know-your-rights/students-rights/"
+    }
+}

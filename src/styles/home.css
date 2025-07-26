@@ -1,0 +1,114 @@
+/* src/styles/home.css */
+
+.home-wrapper {
+    background-color: #fdf6ef;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 4rem 1rem;
+}
+
+.hero-section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 720px;
+    width: 100%;
+    padding: 2rem;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #f97316;
+    margin-top: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #dc2626;
+    margin-top: 0.5rem;
+}
+
+.hero-blurb {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 1.5rem 0;
+    color: #374151;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.typewriter-questions {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: #1f2937;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.typewriter-questions .prompt {
+    font-weight: 600;
+    color: #6b7280;
+}
+
+.typewriter-questions .question {
+    font-weight: 500;
+    color: #1f2937;
+    margin-top: 0.25rem;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.start-chat-button,
+.learn-more-button {
+    background-color: #fcd34d;
+    font-weight: 600;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #92400e;
+    font-size: 1rem;
+    transition: background 0.2s ease-in-out;
+}
+
+.start-chat-button:hover,
+.learn-more-button:hover {
+    background-color: #fbbf24;
+}
+
+.hero-image-placeholder {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.hero-logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
