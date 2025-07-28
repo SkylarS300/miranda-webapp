@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   optimizeDeps: {
-    include: ['jspdf']  // ✅ okay to keep
+    include: ['jspdf']  // okay to keep
   }
-  // ❌ remove build.rollupOptions.external entirely
+  // remove build.rollupOptions.external entirely
 });
