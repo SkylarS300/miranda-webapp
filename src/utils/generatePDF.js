@@ -1,7 +1,6 @@
 // src/utils/generatePDF.js
 
 export async function generatePDF(section) {
-    // ✅ Prevent build-time/server-side execution
     if (typeof window === 'undefined') return;
 
     const { jsPDF } = await import("jspdf");
@@ -16,6 +15,10 @@ export async function generatePDF(section) {
         else doc.setFont(undefined, 'normal');
         const lines = doc.splitTextToSize(text, wrapOptions.maxWidth);
         lines.forEach((line) => {
+            if (y > 270) {
+                doc.addPage();
+                y = 20;
+            }
             doc.text(line, 15, y);
             y += lineSpacing;
         });
@@ -23,7 +26,7 @@ export async function generatePDF(section) {
     };
 
     doc.setFontSize(16);
-    doc.text(section.pdfTitle || section.title, 15, y);
+    doc.text(section.pdfTitle || section.title || 'Miranda Guide', 15, y);
     y += 10;
 
     doc.setFontSize(12);
@@ -61,5 +64,15 @@ export async function generatePDF(section) {
         writeText('Source: ' + section.source);
     }
 
-    doc.save(`${section.title.replace(/\s+/g, '_')}.pdf`);
+    // Optional: timestamp footer
+    if (y > 270) {
+        doc.addPage();
+        y = 20;
+    }
+    doc.setFontSize(10);
+    doc.setFont(undefined, 'normal');
+    doc.text(`Generated on ${new Date().toLocaleDateString()}`, 15, 285);
+
+    const safeTitle = (section.pdfTitle || section.title || 'miranda_guide').replace(/\s+/g, '_');
+    doc.save(`${safeTitle}.pdf`);
 }
