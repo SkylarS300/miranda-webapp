@@ -8,7 +8,7 @@ export default function ChatPage() {
     const [existingCids, setExistingCids] = useState([]);
     const [selectedCid, setSelectedCid] = useState("");
 
-    const HF_SPACE_URL = "https://skylar1s2c3h-miranda-bot.hf.space";
+    const HF_SPACE_URL = "https://skylar1s2c3h-miranda-bot-second.hf.space";
 
     // Monitor login state
     useEffect(() => {
