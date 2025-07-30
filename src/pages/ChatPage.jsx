@@ -1,5 +1,3 @@
-// ✅ ChatPage.jsx (cleaned of resume functionality)
-
 import React, { useEffect, useState } from "react";
 import { auth } from "../firebase";
 import { Typewriter } from "react-simple-typewriter";
@@ -7,9 +5,12 @@ import "../styles/ask.css";
 
 export default function ChatPage() {
     const [uid, setUid] = useState("");
+    const [existingCids, setExistingCids] = useState([]);
+    const [selectedCid, setSelectedCid] = useState("");
 
     const HF_SPACE_URL = "https://skylar1s2c3h-miranda-bot-final.hf.space";
 
+    // Monitor login state
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged((user) => {
             if (user) setUid(user.uid);
@@ -18,7 +19,18 @@ export default function ChatPage() {
         return () => unsubscribe();
     }, []);
 
-    const botUrl = `${HF_SPACE_URL}?uid=${uid}`;
+    // Fetch user's saved chats
+    useEffect(() => {
+        if (!uid) return;
+        fetch(`${HF_SPACE_URL}/list-chats/${uid}`)
+            .then((res) => res.json())
+            .then((files) => setExistingCids(files.reverse()));
+    }, [uid]);
+
+    // URL for iframe
+    const botUrl = selectedCid
+        ? `${HF_SPACE_URL}?uid=${uid}&cid=${selectedCid}`
+        : `${HF_SPACE_URL}?uid=${uid}`;
 
     return (
         <div className="ask-page">
@@ -44,14 +56,12 @@ export default function ChatPage() {
                     />
                 </span>
             </div>
-
-            <div style={{ marginTop: "2rem" }}>
+            <div className="chat-wrapper">
                 {uid ? (
                     <iframe
                         key={botUrl}
                         src={botUrl}
-                        width="100%"
-                        height="600px"
+                        className="miranda-chat-iframe"
                         frameBorder="0"
                         title="Miranda Chatbot"
                     ></iframe>

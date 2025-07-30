@@ -86,3 +86,19 @@
     width: 100%;
     max-width: 400px;
 }
+
+.chat-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.miranda-chat-iframe {
+  width: 100%;
+  max-width: 900px;
+  height: 600px;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+  background-color: #fdf6ef; /* matches your body background */
+  border: 1px solid #eee;
+}
