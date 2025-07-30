@@ -5,7 +5,7 @@ import { getAuth } from "firebase/auth";
 
 // ✅ Your Firebase config (already filled in)
 const firebaseConfig = {
-    apiKey: "AIzaSyDiJ1yx4q4LMRV9YDGxRz2hCnRdz-Y5MsU",
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
     authDomain: "miranda-896a1.firebaseapp.com",
     projectId: "miranda-896a1",
     storageBucket: "miranda-896a1.appspot.com",
