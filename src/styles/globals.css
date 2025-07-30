@@ -326,3 +326,24 @@ main {
         padding: 10px;
     }
 }
+
+.user-controls,
+.auth-buttons {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.logout-btn {
+    background: none;
+    border: none;
+    color: #dc2626;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.user-email {
+    font-size: 0.9rem;
+    color: #444;
+}

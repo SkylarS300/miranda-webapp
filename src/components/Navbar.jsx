@@ -1,15 +1,30 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { auth } from '../firebase';
 import '../styles/globals.css';
 
 const Navbar = () => {
     const location = useLocation();
+    const navigate = useNavigate();
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [user, setUser] = useState(null);
+
+    useEffect(() => {
+        const unsubscribe = auth.onAuthStateChanged((u) => {
+            setUser(u);
+        });
+        return () => unsubscribe();
+    }, []);
 
     // Close menu when route changes
     useEffect(() => {
         setMobileMenuOpen(false);
     }, [location.pathname]);
+
+    const handleLogout = async () => {
+        await auth.signOut();
+        navigate('/login');
+    };
 
     return (
         <nav className="navbar">
@@ -39,6 +54,20 @@ const Navbar = () => {
                     </li>
                     <li className={location.pathname === '/about' ? 'active' : ''}>
                         <Link to="/about">About</Link>
+                    </li>
+
+                    {/* ✅ Auth logic here */}
+                    <li className="auth-link">
+                        {user ? (
+                            <div className="user-controls">
+                                <span className="user-email">{user.email}</span>
+                                <button className="logout-btn" onClick={handleLogout}>Logout</button>
+                            </div>
+                        ) : (
+                            <div className="auth-buttons">
+                                <Link to="/login">Login</Link> / <Link to="/signup">Sign Up</Link>
+                            </div>
+                        )}
                     </li>
                 </ul>
             </div>

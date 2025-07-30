@@ -6,6 +6,9 @@ import Ask from './pages/Ask';
 import KnowYourRights from './pages/KnowYourRights';
 import Resources from './pages/Resources';
 import About from './pages/About';
+import Signup from './auth/Signup';
+import Login from './auth/Login';
+import ChatPage from './pages/ChatPage'; // Placeholder for your Hugging Face bot iframe
 import './styles/globals.css'; // just in case
 
 function App() {
@@ -20,6 +23,9 @@ function App() {
             <Route path="/rights" element={<KnowYourRights />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/about" element={<About />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/chat" element={<ChatPage />} />
           </Routes>
         </main>
         <Footer />

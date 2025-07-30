@@ -47,3 +47,42 @@
     font-weight: 500;
     color: #1f2937;
 }
+
+.start-chat-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.start-chat-button {
+    display: inline-block;
+    background-color: #382c54;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.start-chat-button:hover {
+    background-color: #000;
+}
+
+.chat-selector {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.chat-selector label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.chat-selector select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 400px;
+}
