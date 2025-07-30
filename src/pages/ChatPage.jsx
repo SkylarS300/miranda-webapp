@@ -8,7 +8,7 @@ import "../styles/ask.css";
 export default function ChatPage() {
     const [uid, setUid] = useState("");
 
-    const HF_SPACE_URL = "https://skylar1s2c3h-miranda-bot-second.hf.space";
+    const HF_SPACE_URL = "https://skylar1s2c3h-miranda-bot-final.hf.space";
 
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged((user) => {

@@ -344,6 +344,37 @@ main {
 }
 
 .user-email {
-    font-size: 0.9rem;
-    color: #444;
+  color: #A9F1FF; /* Light teal, matches nav links */
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+.logout-btn {
+  background-color: #e44; /* Red, but more stylish */
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
+}
+
+.logout-btn:hover {
+  background-color: #cc0000;
+}
+
+.user-email {
+  color: #c0dfff;
+  font-weight: 500;
+}
+
+.user-controls {
+  background-color: #2f2745; /* Slightly darker than navbar */
+  border-radius: 999px;
+  padding: 4px 10px;
+  display: flex;
+  align-items: center;
 }
