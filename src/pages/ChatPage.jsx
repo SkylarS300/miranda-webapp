@@ -4,33 +4,18 @@ import { Typewriter } from "react-simple-typewriter";
 import "../styles/ask.css";
 
 export default function ChatPage() {
-    const [uid, setUid] = useState("");
-    const [existingCids, setExistingCids] = useState([]);
-    const [selectedCid, setSelectedCid] = useState("");
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
 
     const HF_SPACE_URL = "https://skylar1s2c3h-miranda-bot-final.hf.space";
 
     // Monitor login state
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged((user) => {
-            if (user) setUid(user.uid);
+            if (user) setIsAuthenticated(true);
             else window.location.href = "/login";
         });
         return () => unsubscribe();
     }, []);
-
-    // Fetch user's saved chats
-    useEffect(() => {
-        if (!uid) return;
-        fetch(`${HF_SPACE_URL}/list-chats/${uid}`)
-            .then((res) => res.json())
-            .then((files) => setExistingCids(files.reverse()));
-    }, [uid]);
-
-    // URL for iframe
-    const botUrl = selectedCid
-        ? `${HF_SPACE_URL}?uid=${uid}&cid=${selectedCid}`
-        : `${HF_SPACE_URL}?uid=${uid}`;
 
     return (
         <div className="ask-page">
@@ -56,15 +41,15 @@ export default function ChatPage() {
                     />
                 </span>
             </div>
+
             <div className="chat-wrapper">
-                {uid ? (
+                {isAuthenticated ? (
                     <iframe
-                        key={botUrl}
-                        src={botUrl}
+                        src={HF_SPACE_URL}
                         className="miranda-chat-iframe"
                         frameBorder="0"
                         title="Miranda Chatbot"
-                    ></iframe>
+                    />
                 ) : (
                     <p>Loading chat interface...</p>
                 )}
